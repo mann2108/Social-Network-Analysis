@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% load static %}
+{% static "" as baseUrl %}
+
+<html lang="zxx" class="no-js">
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="{% static 'app/img/fav.png' %}">
+	<!-- Author Meta -->
+	<meta name="author" content="colorlib">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>Social Network Analysis</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+		<!--
+		CSS
+		============================================= -->
+		<link rel="stylesheet" href="{% static 'app/css/linearicons.css' %}' %}">
+		<link rel="stylesheet" href="{% static 'app/css/font-awesome.min.css' %}">
+		<link rel="stylesheet" href="{% static 'app/css/bootstrap.css' %}">
+		<link rel="stylesheet" href="{% static 'app/css/magnific-popup.css' %}">
+		<link rel="stylesheet" href="{% static 'app/css/jquery-ui.css' %}">
+		<link rel="stylesheet" href="{% static 'app/css/nice-select.css' %}">
+		<link rel="stylesheet" href="{% static 'app/css/animate.min.css' %}">
+		<link rel="stylesheet" href="{% static 'app/css/owl.carousel.css' %}">
+		<link rel="stylesheet" href="{% static 'app/css/main.css' %}">
+	</head>
+	<body>
+
+        <!-- Start other-issue Area -->
+        <section class="other-issue-area section-gap">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="menu-content pb-70 col-lg-9">
+                        <div class="title text-center">
+                            <h1 class="mb-10">FOLLOWERS</h1>
+                            <p>See who follows you</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    {% for i in rel%}
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-other-issue">
+                            <div class="thumb">
+                                <img class="img-fluid" src="{{baseUrl}}Profile_Pic/{{i.profile_pic_path}}" alt="">
+                            </div>
+                            <a href="#">
+                                 <center><h4>{{i.name}}</h4></center>
+                            </a>
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+
+                    {% endfor %}
+
+                </div>
+            </div>
+        </section>
+        <!-- End other-issue Area -->
+
+		<script src="{% static 'app/js/vendor/jquery-2.2.4.min.js' %}"></script>
+		<script src="{% static 'app/js/popper.min.js' %}"></script>
+		<script src="{% static 'app/js/vendor/bootstrap.min.js' %}"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+		<script src="{% static 'app/js/jquery-ui.js' %}"></script>
+		<script src="{% static 'app/js/easing.min.js' %}"></script>
+		<script src="{% static 'app/js/hoverIntent.js' %}"></script>
+		<script src="{% static 'app/js/superfish.min.js' %}"></script>
+		<script src="{% static 'app/js/jquery.ajaxchimp.min.js' %}"></script>
+		<script src="{% static 'app/js/jquery.magnific-popup.min.js' %}"></script>
+		<script src="{% static 'app/js/jquery.nice-select.min.js' %}"></script>
+		<script src="{% static 'app/js/owl.carousel.min.js' %}"></script>
+		<script src="{% static 'app/js/mail-script.js' %}"></script>
+		<script src="{% static 'app/js/main.js' %}"></script>
+	</body>
+</html>
